@@ -76,9 +76,9 @@
 		</repository>
     
 		 <snapshotRepository>
-			<id>nexus-snapshot</id>
-			<name>snapshot</name>
-			<url>http://localhost:8081/repository/maven-snapshots/</url>
+			<id>nexus-spashot</id>
+			<name>nexus-spashot</name>
+			<url>http://localhost:8081/repository/nexus-spashot/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<build>
