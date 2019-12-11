@@ -68,78 +68,22 @@
 		
                 <repository>
 			<id>nexus-release</id>
-			<name>releases</name>
+			<name>release</name>
 			<url>http://localhost:8081/repository/nexus-release/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
                  
-                <snapshotRepository>
+               
+       <distributionManagement>
+		 <snapshotRepository>
 			<id>nexus-snapshot</id>
-			<name>snapshots</name>
-			<url>http://localhost:8081/repository/nexus-spashot/</url>
+			<name>snapshot</name>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
-
-		
 	</distributionManagement>
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-archetype-plugin</artifactId>
-					<version>${version.archetype.plugin}</version>
-				</plugin>
-                                <plugin>
-   			<artifactId>maven-deploy-plugin</artifactId>
-   			<version>2.8.1</version>
-   			<executions>
-      				<execution>
-      				   <id>default-deploy</id>
-       				   <phase>deploy</phase>
-        			   <goals>
-            				<goal>deploy</goal>
-         			   </goals>
-      				</execution>
-  		        </executions>
-		</plugin>
-
-		<plugin>
-  		 <groupId>org.apache.maven.plugins</groupId>
-   		 <artifactId>maven-deploy-plugin</artifactId>
-  		 <version>2.8.1</version>
-  		 <configuration>
-    		  <skip>true</skip>
-   		</configuration>
-		</plugin>
-
-		<plugin>
-  		 <groupId>org.sonatype.plugins</groupId>
-  		 <artifactId>nexus-staging-maven-plugin</artifactId>
-  		 <version>1.1</version>
-  		 <executions>
-    		  <execution>
-       			  <id>default-deploy</id>
-			  <phase>deploy</phase>
-         		  <goals>
-           			 <goal>deploy</goal>
-        		  </goals>
-      		  </execution>
-   		</executions>
-   		<configuration>
-      			<nexusUrl>http://localhost:8081/</nexusUrl>
-			<serverId>nexus-snapshot</serverId>
-			<localUsername>admin</localUsername>
-            		<javaVersion>1.8.0_222</javaVersion>
-     			 <skipStaging>true</skipStaging>
-			  
-  		 </configuration>
-		</plugin>
-
-			</plugins>
-		</pluginManagement>
-	</build>
+	
 
   <modules>
     <module>cours1-ejb</module>
