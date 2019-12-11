@@ -29,39 +29,7 @@
 
 	</properties>
 
-	<dependencyManagement>
-		<dependencies>
-
-			<dependency>
-				<groupId>tn.esprit</groupId>
-				<artifactId>cours1-ejb</artifactId>
-				<version>1.0</version>
-				<type>ejb</type>
-			</dependency>
-
-			<dependency>
-				<groupId>tn.esprit</groupId>
-				<artifactId>cours1-web</artifactId>
-				<version>1.0</version>
-				<type>war</type>
-			</dependency>
-
-
-			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-api</artifactId>
-				<version>${version.javaee}</version>
-				<scope>provided</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.primefaces</groupId>
-				<artifactId>primefaces</artifactId>
-				<version>${primefaces.version}</version>
-			</dependency>
-
-		</dependencies>
-	</dependencyManagement>
+	
 
 
 	<distributionManagement>
